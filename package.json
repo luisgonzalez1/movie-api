@@ -1,0 +1,33 @@
+{
+  "name": "express-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "nodemon --exec ts-node src/index.ts",
+    "deploy": "ts-node dist/index.js",
+    "gulp-zip": "./node_modules/.bin/gulp default",
+    "gulp": "./node_modules/.bin/gulp build",
+    "build": "tsc && npm run gulp-zip && npm run gulp"
+  },
+  "author": "blake",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.248.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "ts-node": "^6.1.0",
+    "typescript": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/express-session": "^1.15.9",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "cucumber": "^4.2.1",
+    "gulp": "^4.0.0",
+    "gulp-zip": "^4.2.0",
+    "tslint": "^5.10.0"
+  }
+}
