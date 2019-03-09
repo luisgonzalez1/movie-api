@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "nodemon --exec ts-node src/index.ts",
-    "deploy": "ts-node dist/index.js",
+    "start": "nodemon --exec ts-node dist/index.js",
+    "deploy": "node dist/index.js",
     "gulp-zip": "./node_modules/.bin/gulp default",
     "gulp": "./node_modules/.bin/gulp build",
     "build": "tsc && npm run gulp-zip && npm run gulp"
