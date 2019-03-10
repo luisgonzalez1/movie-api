@@ -8,7 +8,7 @@
     "deploy": "node dist/index.js",
     "gulp-zip": "./node_modules/.bin/gulp default",
     "gulp": "./node_modules/.bin/gulp build",
-    "build": "tsc && npm run gulp-zip && npm run gulp"
+    "build": "tsc"
   },
   "author": "blake",
   "license": "ISC",
