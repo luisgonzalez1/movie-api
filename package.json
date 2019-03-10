@@ -2,18 +2,18 @@
   "name": "express-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec ts-node dist/index.js",
+    "start": "node index.js",
     "deploy": "node dist/index.js",
     "gulp-zip": "./node_modules/.bin/gulp default",
     "gulp": "./node_modules/.bin/gulp build",
-    "build": "tsc && npm run gulp-zip && npm run gulp"
+    "build": "tsc"
   },
   "author": "blake",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.248.1",
+    "aws-sdk": "^2.418.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "express-session": "^1.15.6",

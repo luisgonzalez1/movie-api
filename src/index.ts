@@ -4,11 +4,13 @@ import session from 'express-session';
 import path from 'path';
 import { movieRouter } from './routers/movie-router';
 import { userRouter } from './routers/user-router';
+const AWS = require('aws-sdk');
 
-
+// Set region for AWS SDKs
+AWS.config.region = process.env.REGION;
 const app = express();
 
-const port = 3001;
+const port = 8081;
 app.set('port', port);
 
 
@@ -33,6 +35,8 @@ app.use((req, res, next) => {
   next();
 });
 
+
+
 // use the body parser to convert request json
 app.use(bodyParser.json());
 
@@ -47,7 +51,7 @@ app.use((req, resp, next) => {
 });
 
 // Enpoint just to test
-app.get('/test-endpoint', (req, res) => {
+app.get('/', (req, res) => {
   res.json({content: 'hello'});
 });
 

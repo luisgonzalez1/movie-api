@@ -1,0 +1,30 @@
+version: 0.2
+environment_variables:
+    plaintext:
+        S3_BUCKET: "jenkins-deployment-bucket-gon"
+phases:
+    install:
+        commands:
+            - echo Installing source NPM dependencies...
+            - ls
+            - npm install
+    build:
+        commands:
+            - echo Build started on `date`
+            - npm run build
+   
+artifacts:
+    files:
+    - dao/*
+    - .ebextensions/*
+    - index.js
+    - package.json
+    - package-lock.json
+    - node_modules/**/*
+    - routers/*
+    - security/*
+    - services/*
+    - src/*
+    - index.js.map
+    
+     
