@@ -52,7 +52,7 @@ app.use((req, resp, next) => {
 
 // Enpoint just to test
 app.get('/', (req, res) => {
-  res.json({content: 'hello'});
+  res.json({content: 'hello world'});
 });
 
 /*******************************************************************************
