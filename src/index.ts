@@ -50,6 +50,15 @@ app.use((req, resp, next) => {
   next();
 });
 
+app.set('static', __dirname + '/views')
+
+app.get('/sign-in', function (req, res) {
+  res.render('index', {
+    title: 'this is the sign in'
+    })
+    res.status(200).end();
+})
+
 // Enpoint just to test
 app.get('/', (req, res) => {
   res.json({content: 'hello world'});
