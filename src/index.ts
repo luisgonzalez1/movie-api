@@ -50,7 +50,7 @@ app.use((req, resp, next) => {
   next();
 });
 
-app.set('static', __dirname + '/views')
+app.set('static', __dirname + '/static')
 
 app.get('/sign-in', function (req, res) {
   res.render('index', {
