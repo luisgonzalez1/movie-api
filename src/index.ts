@@ -61,7 +61,7 @@ app.get('/sign-in', function (req, res) {
 
 // Enpoint just to test
 app.get('/', (req, res) => {
-  res.json({content: 'hello world!!!!!!!'});
+  res.json({content: 'hello Karthik'});
 });
 
 /*******************************************************************************
