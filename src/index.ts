@@ -50,14 +50,15 @@ app.use(bodyParser.json());
 //   next();
 // });
 
-// app.set('static', __dirname + '/static');
+app.set('view engine', 'pug');
+app.set('static', __dirname + '/static');
 
-// app.get('/sign-in', function (req, res) {
-//   res.render('index', {
-//     title: 'this is the sign in'
-//     })
-//     res.status(200).end();
-// });
+app.get('/', function (req, res) {
+  res.render('first-page.html', {
+    title: 'this is the sign in'
+    })
+    res.status(200).end();
+});
 
 // Enpoint just to test
 app.get('/', (req, res) => {
