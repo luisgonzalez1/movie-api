@@ -54,7 +54,7 @@ app.set('view engine', 'pug');
 app.set('static', __dirname + '/static');
 
 app.get('/', function (req, res) {
-  res.render('first-page.html', {
+  res.render('first-page', {
     title: 'this is the sign in'
     })
     res.status(200).end();
