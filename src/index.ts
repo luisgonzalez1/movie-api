@@ -25,9 +25,9 @@ const sess = {
 app.use(session(sess));
 
 // allow static content to be served, navigating to url with nothing after / will serve index.html from public
-app.use(
-  express.static(path.join(__dirname, 'static'))
-);
+// app.use(
+//   express.static(path.join(__dirname, 'static'))
+// );
 
 // log the request being made
 app.use((req, res, next) => {
@@ -41,23 +41,23 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 
 // allow cross origins
-app.use((req, resp, next) => {
-  (process.env.MOVIE_API_STAGE === 'prod')
-    ? resp.header('Access-Control-Allow-Origin', process.env.DEMO_APP_URL)
-    : resp.header('Access-Control-Allow-Origin', 'http://localhost:9001');
-  resp.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  resp.header('Access-Control-Allow-Credentials', 'true');
-  next();
-});
+// app.use((req, resp, next) => {
+//   (process.env.MOVIE_API_STAGE === 'prod')
+//     ? resp.header('Access-Control-Allow-Origin', process.env.DEMO_APP_URL)
+//     : resp.header('Access-Control-Allow-Origin', 'http://localhost:9001');
+//   resp.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+//   resp.header('Access-Control-Allow-Credentials', 'true');
+//   next();
+// });
 
-app.set('static', __dirname + '/static')
+// app.set('static', __dirname + '/static');
 
-app.get('/sign-in', function (req, res) {
-  res.render('index', {
-    title: 'this is the sign in'
-    })
-    res.status(200).end();
-})
+// app.get('/sign-in', function (req, res) {
+//   res.render('index', {
+//     title: 'this is the sign in'
+//     })
+//     res.status(200).end();
+// });
 
 // Enpoint just to test
 app.get('/', (req, res) => {
