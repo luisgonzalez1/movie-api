@@ -61,7 +61,7 @@ app.get('/', function (req, res) {
 });
 
 // Enpoint just to test
-app.get('/', (req, res) => {
+app.get('/test-endpoint', (req, res) => {
   res.json({content: 'hello Karthik'});
 });
 
