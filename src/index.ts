@@ -25,9 +25,9 @@ const sess = {
 app.use(session(sess));
 
 // allow static content to be served, navigating to url with nothing after / will serve index.html from public
-// app.use(
-//   express.static(path.join(__dirname, 'static'))
-// );
+app.use(
+  express.static(path.join(__dirname, 'static'))
+);
 
 // log the request being made
 app.use((req, res, next) => {
@@ -55,8 +55,8 @@ app.set('static', __dirname + '/static');
 
 app.get('/', function (req, res) {
   res.render('first-page', {
-    title: 'this is the sign in'
-    })
+    title: 'test'
+    });
     res.status(200).end();
 });
 
